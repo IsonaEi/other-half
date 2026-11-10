@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Other Half</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/*FONT-BEGIN*/@font-face{font-family:'Cubic11';src:url(data:font/woff2;base64,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) format('woff2');font-display:block}/*FONT-END*/
+/* 版面：單一 16:9 畫布置中，遊戲畫面全部畫在 canvas 上；手機對 Bot 時畫布下方多一排觸控方向鍵 */
+:root{
+  --page:#2a2230; --panel:#fff8e8; --ink:#3f2631; --ink2:rgba(63,38,49,.75);
+  --edge:#e6d6b8; --font:'Cubic11',"PingFang TC","Noto Sans TC",sans-serif;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{margin:0;background:var(--page);color:var(--panel);font-family:var(--font);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:8px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;overflow:hidden}
+#wrap{width:min(100%,calc((100vh - 16px) * 16 / 9));aspect-ratio:16/9;max-width:100%}
+#cv{width:100%;height:100%;display:block;image-rendering:pixelated;touch-action:none;outline:none}
+#pad{display:none;gap:8px}
+#pad button{font:22px var(--font);min-width:56px;min-height:48px;background:var(--panel);color:var(--ink);border:3px solid var(--ink);box-shadow:0 3px 0 var(--ink);border-radius:0;touch-action:manipulation}
+#pad button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+#pad button:focus-visible{outline:3px solid #f2c14e}
+@media (pointer:coarse){ body.botmode #pad{display:grid} }
+#pad{grid-template-columns:repeat(3,56px);grid-template-rows:repeat(3,48px);gap:6px}
+#padU{grid-area:1/2} #padL{grid-area:2/1} #padS{grid-area:2/2} #padR{grid-area:2/3} #padD{grid-area:3/2}
+@media (pointer:coarse) and (orientation:landscape){ body.botmode{flex-direction:row} body.botmode #wrap{width:min(calc(100% - 200px),calc((100vh - 16px) * 16 / 9))} }
+@media (pointer:coarse) and (orientation:portrait){ body.botmode #wrap{width:min(100%,calc((100vh - 190px) * 16 / 9))} }
+</style>
+<main id="wrap"><canvas id="cv" width="1280" height="720" tabindex="0" aria-label="Other Half 遊戲畫面"></canvas></main>
+<div id="pad" aria-label="觸控方向鍵">
+  <button id="padL" data-a="3" aria-label="左">←</button><button id="padU" data-a="1" aria-label="上">↑</button>
+  <button id="padS" data-a="0" aria-label="停">停</button>
+  <button id="padD" data-a="2" aria-label="下">↓</button><button id="padR" data-a="4" aria-label="右">→</button>
+</div>
+<script>
+const ATLAS = {"idx":{"grass0":0,"grass1":1,"grass2":2,"bush":3,"tree":4,"pine":5,"p00":6,"p10":7,"p20":8,"p01":9,"p21":10,"p02":11,"p12":12,"p22":13,"sand":14,"human":15,"ai":16,"deer":17,"rabbit":18},"data":"data:image/png;base64,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"};
+
+// SIM-BEGIN
+// 規則。這段不碰 DOM，Node 測試直接執行。
+const N = 10, VIEW = 3, MAXSTEP = 50, LOCK_STAYS = 1;   // 在圖案格上停一次就選定
+const REWARD = { success: 1, wrong: -1, timeout: -2 };
+const DXY = [[0, 0], [0, -1], [0, 1], [-1, 0], [1, 0]];   // 0 停、1 上、2 下、3 左、4 右
+const DIM = ['c', 's'];                                   // A 拿顏色、B 拿形狀
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+}
+const cheb = (p, q) => Math.max(Math.abs(p.x - q.x), Math.abs(p.y - q.y));
+const manh = (p, q) => Math.abs(p.x - q.x) + Math.abs(p.y - q.y);
+const same = (p, q) => p.x === q.x && p.y === q.y;
+const patAt = (pats, p) => pats.findIndex(q => q.x === p.x && q.y === p.y);
+const compOf = (pats, i) => pats.findIndex(q => q.c !== pats[i].c && q.s !== pats[i].s);
+
+function newRound(rand, opt = {}) {
+  const minStart = opt.minStartDist ?? 4;
+  const taken = new Set(), key = p => p.y * N + p.x;
+  const randCell = () => ({ x: Math.floor(rand() * N), y: Math.floor(rand() * N) });
+  const combos = [[0, 0], [0, 1], [1, 0], [1, 1]];
+  const pats = combos.map(([c, s]) => { let p; do p = randCell(); while (taken.has(key(p))); taken.add(key(p)); return { ...p, c, s }; });
+  const ans = { c: rand() < 0.5 ? 0 : 1, s: rand() < 0.5 ? 0 : 1 };
+  let A, B;
+  do A = randCell(); while (taken.has(key(A)));
+  do B = randCell(); while (taken.has(key(B)) || cheb(A, B) < minStart);
+  const pl = p => ({ x: p.x, y: p.y, stays: 0, locked: false, lockPat: -1 });
+  return { pats, ans, p: [pl(A), pl(B)], t: 0, done: false, outcome: null, log: [] };
+}
+
+const hintOf = (S, i) => S.ans[DIM[i]];
+const ansIdx = S => S.pats.findIndex(q => q.c === S.ans.c && q.s === S.ans.s);
+function isCorrectPair(S, i, j) {
+  if (i < 0 || j < 0 || i === j) return false;
+  const a = ansIdx(S);
+  return (i === a && j === compOf(S.pats, a)) || (j === a && i === compOf(S.pats, a));
+}
+
+// 一步：兩人同時決定、一起結算；碰撞對稱擋回
+function step(S, acts) {
+  if (S.done) return;
+  const P = S.p, eff = acts.map((a, i) => P[i].locked ? 0 : a);
+  const cur = P.map(p => ({ x: p.x, y: p.y }));
+  const tgt = eff.map((a, i) => {
+    const x = cur[i].x + DXY[a][0], y = cur[i].y + DXY[a][1];
+    return (x < 0 || y < 0 || x >= N || y >= N) ? { ...cur[i] } : { x, y };
+  });
+  let fin = tgt.map(t => ({ ...t }));
+  if (same(tgt[0], tgt[1]) || (same(tgt[0], cur[1]) && same(tgt[1], cur[0]))) fin = cur.map(c => ({ ...c }));
+  else for (let i = 0; i < 2; i++) { const j = 1 - i; if (same(tgt[i], cur[j]) && same(fin[j], cur[j])) fin[i] = { ...cur[i] }; }
+  for (let i = 0; i < 2; i++) {
+    const p = P[i];
+    if (p.locked) continue;
+    const onPat = patAt(S.pats, fin[i]);
+    p.stays = (eff[i] === 0 && onPat >= 0) ? p.stays + 1 : 0;      // 只有「停」算；抵達、移動、被擋都不算
+    p.x = fin[i].x; p.y = fin[i].y;
+    if (p.stays >= LOCK_STAYS) { p.locked = true; p.lockPat = onPat; }
+  }
+  S.t++;
+  S.log.push({ t: S.t, acts: eff.slice(), pos: P.map(p => [p.x, p.y]) });
+  if (P[0].locked && P[1].locked) { S.done = true; S.outcome = isCorrectPair(S, P[0].lockPat, P[1].lockPat) ? 'success' : 'wrong'; }
+  else if (S.t >= MAXSTEP) { S.done = true; S.outcome = 'timeout'; }
+}
+
+// 觀測：自己位置、四格圖案、剩餘步數、7×7 內的對方、只在開頭的提示
+function observe(S, i, opt = {}) {
+  const me = S.p[i], o = S.p[1 - i];
+  const vis = opt.fullView || cheb(me, o) <= VIEW;
+  const hintShown = opt.hintAlways || S.t < (opt.hintSteps ?? 1);
+  return { t: S.t, self: { x: me.x, y: me.y }, partner: vis ? { x: o.x, y: o.y } : null,
+    pats: S.pats, hint: hintShown ? hintOf(S, i) : null, remaining: MAXSTEP - S.t, locked: me.locked };
+}
+
+// Bot：腳本狀態機，只用自己的觀測
+function makeBot(role) {
+  return { role, hint: null, seen: null, seenT: -9, still: 0, g: null, pLock: -1, sig: -1, unseen: 99, pointed: 0,
+    follow: 0, wp: -1, goSeen: false, blocked: 0, prevPos: null, prevAct: -1 };
+}
+function bfsStep(from, to, blocks) {
+  if (same(from, to)) return 0;
+  const k = p => p.y * N + p.x, bad = new Set(blocks.filter(q => !same(q, to)).map(k));
+  const prev = new Map([[k(from), null]]), q = [from];
+  while (q.length) {
+    const c = q.shift();
+    for (let a = 1; a <= 4; a++) {
+      const n = { x: c.x + DXY[a][0], y: c.y + DXY[a][1] };
+      if (n.x < 0 || n.y < 0 || n.x >= N || n.y >= N || prev.has(k(n)) || bad.has(k(n))) continue;
+      prev.set(k(n), { c, a });
+      if (same(n, to)) { let e = prev.get(k(n)); while (!same(e.c, from)) e = prev.get(k(e.c)); return e.a; }
+      q.push(n);
+    }
+  }
+  return blocks.length > 1 ? bfsStep(from, to, blocks.slice(0, 1)) : 0;   // 繞不過圖案格就只避開對方
+}
+const PATROL = [[2, 2], [7, 2], [7, 7], [2, 7]];                          // 巡邏點：四個 7×7 視野大致蓋滿全圖
+const adjPats = (pats, p) => pats.map((q, i) => i).filter(i => manh(pats[i], p) === 1);
+function botAct(b, ob) {
+  if (ob.hint !== null && b.hint === null) b.hint = ob.hint;
+  const me = ob.self, pats = ob.pats, myD = DIM[b.role], pD = DIM[1 - b.role], P = ob.partner;
+  b.blocked = (b.prevPos && same(b.prevPos, me) && b.prevAct > 0) ? b.blocked + 1 : 0;
+  if (ob.locked) return 0;
+  // 讀對方：站在圖案格上沒動＝選定了；在圖案格旁邊停下＝指著那格（旁邊的格子屬性都一樣才算）
+  if (P) {
+    const contig = b.seen && b.seenT === ob.t - 1;
+    b.still = (contig && same(b.seen, P)) ? b.still + 1 : 0;
+    const pi = patAt(pats, P);
+    if (pi >= 0 && b.still >= 1) b.pLock = pi;
+    if (pi < 0 && b.still >= 1 && b.pLock < 0) { const adj = adjPats(pats, P); if (adj.length && adj.every(i => pats[i][pD] === pats[adj[0]][pD])) b.g = pats[adj[0]][pD]; }
+    b.seen = { ...P }; b.seenT = ob.t; b.unseen = 0; b.goSeen = true; b.follow++;
+  } else { b.unseen++; b.still = 0; }
+  const cands = pats.map((q, i) => i).filter(i => pats[i][myD] === b.hint);
+  const near = ref => cands.slice().sort((i, j) => manh(pats[i], ref) - manh(pats[j], ref))[0];
+  const free = n => n.x >= 0 && n.y >= 0 && n.x < N && n.y < N && patAt(pats, n) < 0 && !(P && same(n, P));
+  let T = null, mode = 'go';                     // go＝走到 T 選定；point＝站在 T（訊號格旁）等；wait＝走到 T 附近待著
+  if (b.pLock >= 0) T = pats[compOf(pats, b.pLock)];                      // 1. 對方選定了：去相反格
+  else if (b.g !== null && b.hint !== null) {                            // 2. 看懂對方：去答案格（對方先在那格停下＝它選了，第 1 條會改去相反格）
+    T = pats[pats.findIndex(q => q[myD] === b.hint && q[pD] === b.g)];
+  } else {
+    const signaler = b.role === 0 || b.follow > 6;                        // A 先指；B 先看，看 6 步還讀不到就自己指
+    if (!P && (b.seen === null || b.unseen > 3)) {                        // 3a. 看不到對方：先去它最後出現的地方，再巡邏
+      if (b.goSeen && b.seen && !same(me, b.seen)) T = b.seen;
+      else {
+        b.goSeen = false;
+        if (b.wp < 0) b.wp = PATROL.map((w, i) => i).sort((i, j) => manh(me, { x: PATROL[i][0], y: PATROL[i][1] }) - manh(me, { x: PATROL[j][0], y: PATROL[j][1] }))[0];
+        let w = { x: PATROL[b.wp][0], y: PATROL[b.wp][1] };
+        if (cheb(me, w) <= 1) { b.wp = (b.wp + 1) % 4; w = { x: PATROL[b.wp][0], y: PATROL[b.wp][1] }; }
+        T = w;
+      }
+      mode = 'wait';
+    } else if (signaler && b.pointed < 3) {                               // 3b. 指：站到訊號格旁邊（不碰到其他屬性的格子）停著，讓對方看 3 步
+      const ref = P || b.seen;
+      if (b.sig < 0) b.sig = near(ref);
+      const spots = [1, 2, 3, 4].map(a => ({ x: pats[b.sig].x + DXY[a][0], y: pats[b.sig].y + DXY[a][1] }))
+        .filter(n => free(n) && adjPats(pats, n).every(i => pats[i][myD] === b.hint));
+      if (!spots.length) { b.sig = cands.find(i => i !== b.sig); b.pointed = 0; T = P || b.seen; mode = 'wait'; }
+      else { T = spots.sort((u, v) => manh(u, ref) - manh(v, ref))[0]; mode = 'point'; if (same(me, T) && P) b.pointed++; }
+    } else { T = P || b.seen; mode = 'wait'; }                            // 3c. 跟著對方（2 格內），看它指哪格或選哪格
+    const gi = b.sig >= 0 ? b.sig : near(me);
+    if (ob.remaining <= manh(me, pats[gi]) + 3) { T = pats[gi]; mode = 'go'; }   // 4. 時間快到：猜
+  }
+  const blocks = P ? [P, ...pats] : pats.slice();
+  const awayOk = n => free(n) && !adjPats(pats, n).length && !(P && manh(n, P) < 2);
+  const sidestep = () => { const o = [1, 2, 3, 4].filter(a => awayOk({ x: me.x + DXY[a][0], y: me.y + DXY[a][1] })); return o.length ? o[0] : 0; };
+  let act;
+  if (mode === 'wait') {                                                  // 等的時候不站在圖案格上或旁邊（免得被讀成選定或指）
+    if ((P && cheb(me, P) <= 2) || same(me, T)) act = (patAt(pats, me) >= 0 || adjPats(pats, me).length) ? sidestep() : 0;
+    else act = bfsStep(me, T, blocks);
+  } else if (!same(me, T)) act = bfsStep(me, T, blocks);
+  else act = 0;                                                           // go：在格上停一次＝選定；point：在格旁停著
+  if (b.blocked >= (b.role === 0 ? 2 : 4)) { act = sidestep(); b.blocked = 0; } // 一直被擋：A 先讓、B 晚一點讓
+  b.prevPos = { ...me }; b.prevAct = act;
+  return act;
+}
+// SIM-END
+
+// ---------- 畫面 ----------
+const cv = document.getElementById('cv'), g = cv.getContext('2d');
+g.imageSmoothingEnabled = false;
+const W = 1280, H = 720;
+const C = { page: '#2a2230', panel: '#fff8e8', ink: '#3f2631', ink2: 'rgba(63,38,49,.75)', edge: '#e6d6b8',
+  A: '#2f7d55', B: '#6d4aa0', gold: '#f2c14e', warn: '#b23a2a', ok: '#2f7d55',
+  red: '#d2453b', redHi: '#f39a7c', blue: '#2f6bd0', blueHi: '#8cb8f2', grey: '#8a7f86', greyHi: '#c9c0c4' };
+const FONT = s => `${s}px Cubic11, "PingFang TC", "Noto Sans TC", sans-serif`;
+const COLOR_NAME = ['紅', '藍'], SHAPE_NAME = ['圓', '方'];
+const ROLE_NAME = ['A', 'B'], ROLE_DIM = ['顏色', '形狀'];
+
+const atlasImg = new Image(); atlasImg.src = ATLAS.data;
+function spr(name, x, y, size) { const i = ATLAS.idx[name]; g.drawImage(atlasImg, i * 16, 0, 16, 16, x, y, size, size); }
+
+// 圖案的像素圖（16×16），放大時保持像素感
+function makeShape(shape, fill, hi) {
+  const c = document.createElement('canvas'); c.width = c.height = 16; const x = c.getContext('2d');
+  const inside = (px, py) => shape === 0 ? Math.hypot(px + .5 - 8, py + .5 - 8) <= 5.4 : (px >= 3 && px <= 12 && py >= 3 && py <= 12);
+  for (let py = 0; py < 16; py++) for (let px = 0; px < 16; px++) {
+    if (!inside(px, py)) continue;
+    const edge = !inside(px - 1, py) || !inside(px + 1, py) || !inside(px, py - 1) || !inside(px, py + 1);
+    x.fillStyle = edge ? C.ink : fill; x.fillRect(px, py, 1, 1);
+  }
+  x.fillStyle = hi;
+  if (shape === 0) { x.fillRect(6, 5, 2, 1); x.fillRect(5, 6, 1, 2); } else { x.fillRect(5, 5, 3, 1); x.fillRect(5, 6, 1, 2); }
+  return c;
+}
+const SHAPES = {};
+function shapeImg(s, c) { const k = s + ':' + c; if (!SHAPES[k]) SHAPES[k] = makeShape(s, [C.red, C.blue, C.grey][c], [C.redHi, C.blueHi, C.greyHi][c]); return SHAPES[k]; }
+
+function text(s, x, y, size, color = C.ink, align = 'left') {
+  g.font = FONT(size); g.fillStyle = color; g.textAlign = align; g.textBaseline = 'middle'; g.fillText(s, x, y + 3);
+}
+function panel(x, y, w, h, fill = C.panel) { g.fillStyle = C.ink; g.fillRect(x, y, w, h); g.fillStyle = fill; g.fillRect(x + 3, y + 3, w - 6, h - 6); }
+let hits = [];
+function button(label, x, y, w, h, onClick, opt = {}) {
+  const sel = opt.sel;
+  g.fillStyle = C.ink; g.fillRect(x, y, w, h + 6);
+  g.fillStyle = sel ? C.ink : C.edge; g.fillRect(x + 3, y + h - 3, w - 6, 6);
+  g.fillStyle = sel ? C.ink : C.panel; g.fillRect(x + 3, y + 3, w - 6, h - 6);
+  if (sel) { g.fillStyle = C.panel; g.fillRect(x + 3, y + 3, w - 6, 3); }
+  text(label, x + w / 2, y + h / 2, opt.size || 33, sel ? C.panel : C.ink, 'center');
+  hits.push({ x, y, w, h: h + 6, onClick });
+}
+function tag(s, cx, y, color, size = 22) {
+  g.font = FONT(size); const w = Math.ceil(g.measureText(s).width) + 16, h = size + 10;
+  g.fillStyle = C.ink; g.fillRect(cx - w / 2, y, w, h); g.fillStyle = color; g.fillRect(cx - w / 2 + 3, y + 3, w - 6, h - 6);
+  text(s, cx, y + h / 2, size, C.panel, 'center');
+}
+function hash(x, y, k) { let h = (x * 374761393 + y * 668265263 + k * 2246822519) >>> 0; h = (h ^ h >>> 13) * 1274126177 >>> 0; return h ^ h >>> 16; }
+
+// ---------- 遊戲狀態 ----------
+// 模式：bot＝跟電腦玩（每局隨機知道顏色或形狀）；duoShared＝兩個人・同一個畫面；duoTurn＝兩個人・輪流看螢幕
+const isTouch = matchMedia('(pointer:coarse)').matches;
+const P1 = '#2f7d55', P2 = '#8a5a2b', INK2 = 'rgba(63,38,49,.85)';
+const game = {
+  screen: 'menu', mode: 'bot', fullView: false, hintAlways: false, help: false, page: 0, helpThenPlay: false, seenHelp: false,
+  S: null, bot: null, me: 0, pend: [null, null], round: 0, seed: (Date.now() & 0xffffffff) >>> 0,
+  stats: { success: 0, wrong: 0, timeout: 0, score: 0 }, brief: 0, anim: null, auto: 0, queue: [null, null],
+  shownAt: 0, turn: 0, cover: false, coverAt: 0, still: [false, false], bump: [0, 0], confirm: false,
+};
+let rand = mulberry32(game.seed);
+const isBot = () => game.mode === 'bot';
+const human = () => isBot() ? game.me : -1;
+const opt = () => ({ fullView: game.fullView, hintAlways: game.hintAlways, hintSteps: 1 });
+const show = sc => { game.screen = sc; game.shownAt = performance.now(); };
+const settled = () => performance.now() - game.shownAt > 1000;          // 線索頁、結果頁至少顯示 1 秒，連按不會跳過
+const DIMW = ['顏色', '形狀'];
+const valName = (i, S) => i === 0 ? COLOR_NAME[S.ans.c] : SHAPE_NAME[S.ans.s];
+const cellName = q => COLOR_NAME[q.c] + SHAPE_NAME[q.s];
+const pname = i => isBot() ? (i === game.me ? '你' : '夥伴') : (i ? '2P' : '1P');
+const pcol = i => isBot() ? (i === game.me ? P1 : C.ink) : (i ? P2 : P1);
+
+function toMenu() { show('menu'); game.confirm = false; game.help = false; document.body.classList.remove('botmode'); }
+function startMode(mode) {
+  game.mode = mode; game.stats = { success: 0, wrong: 0, timeout: 0, score: 0 }; game.round = 0;
+  document.body.classList.toggle('botmode', isBot());
+  if (isBot() && !game.seenHelp) { game.help = true; game.page = 0; game.helpThenPlay = true; }
+  nextRound();
+}
+function nextRound() {
+  game.round++; game.S = newRound(rand); game.pend = [null, null]; game.anim = null; game.queue = [null, null];
+  game.still = [false, false]; game.bump = [0, 0]; game.confirm = false;
+  if (isBot()) { game.me = rand() < 0.5 ? 0 : 1; game.bot = makeBot(1 - game.me); } else game.bot = null;
+  game.brief = 0; show('brief');
+}
+function beginPlay() { show('play'); game.turn = 0; game.cover = game.mode === 'duoTurn'; }   // Bot 在第 1 步的觀測裡拿到線索
+function submit(i, a) {
+  const S = game.S; if (game.screen !== 'play' || S.done || S.p[i].locked) return;
+  if (game.anim) { if (game.queue[i] === null) game.queue[i] = a; return; }   // 動畫中按的鍵排隊（每人一格）
+  if (isBot()) {
+    const acts = [0, 0]; acts[i] = a; acts[game.bot.role] = botAct(game.bot, observe(S, game.bot.role, opt()));
+    doStep(acts); return;
+  }
+  game.pend[i] = a;
+  if (game.pend[1 - i] === null && !S.p[1 - i].locked) return;
+  doStep([game.pend[0] ?? 0, game.pend[1] ?? 0]);
+}
+function turnSubmit(a) {                             // 輪流看：一定輪替、每次都遮，已站定也一樣（不洩漏誰站定了）
+  const S = game.S, i = game.turn;
+  if (game.screen !== 'play' || S.done || game.anim || performance.now() - game.coverAt < 400) return;
+  game.pend[i] = S.p[i].locked ? 0 : a;
+  if (i === 0) { game.turn = 1; game.cover = true; return; }
+  doStep([game.pend[0] ?? 0, game.pend[1] ?? 0]);
+  if (!S.done) { game.turn = 0; game.cover = true; }
+}
+function doStep(acts) {
+  const S = game.S, from = S.p.map(p => ({ x: p.x, y: p.y }));
+  const sawBefore = [0, 1].map(v => game.fullView || cheb(S.p[v], S.p[1 - v]) <= VIEW);
+  step(S, acts);
+  for (let v = 0; v < 2; v++) {                       // 夥伴這一步沒動（前後兩步都看得到）：標「停」；位置就看得出的資訊
+    const o = 1 - v, seeNow = game.fullView || cheb(S.p[v], S.p[o]) <= VIEW;
+    game.still[v] = sawBefore[v] && seeNow && same(from[o], S.p[o]);
+    if (acts[v] > 0 && same(from[v], S.p[v]) && !S.p[v].locked) game.bump[v] = performance.now();
+  }
+  game.pend = [null, null];
+  game.anim = { from, t0: performance.now(), dur: 140 };
+  if (S.done) { game.stats[S.outcome]++; game.stats.score += REWARD[S.outcome]; setTimeout(() => show('result'), 420); }
+}
+
+// ---------- 輸入 ----------
+const KEYS_A = { KeyW: 1, KeyS: 2, KeyA: 3, KeyD: 4, Space: 0 };
+const KEYS_B = { ArrowUp: 1, ArrowDown: 2, ArrowLeft: 3, ArrowRight: 4, Enter: 0, NumpadEnter: 0 };
+const KEY_OF = ['Space', 'Enter'], KEY_NAME = ['空白鍵', 'Enter'];
+const isKey = (k, who) => k === KEY_OF[who] || (who === 1 && k === 'NumpadEnter');
+function closeHelp() { game.help = false; game.seenHelp = true; if (game.helpThenPlay) { game.helpThenPlay = false; game.shownAt = performance.now(); } }
+addEventListener('keydown', e => {
+  const k = e.code;
+  if (['Space', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(k)) e.preventDefault();
+  if (e.repeat) return;
+  if (game.confirm) { if (k === 'Escape') toMenu(); else game.confirm = false; return; }
+  if (game.help) {
+    if (k === 'ArrowRight' || k === 'KeyD' || k === 'Space' || k === 'Enter') { if (game.page < HELP.length - 1) game.page++; else closeHelp(); }
+    else if (k === 'ArrowLeft' || k === 'KeyA') game.page = Math.max(0, game.page - 1);
+    else if (k === 'Escape' || k === 'KeyH') closeHelp();
+    return;
+  }
+  if (k === 'KeyH' && game.screen !== 'menu' && game.screen !== 'duoMenu' && game.screen !== 'settings') { game.help = true; game.page = 0; return; }
+  if (k === 'Escape') { if (game.screen === 'duoMenu' || game.screen === 'settings') toMenu(); else if (game.screen !== 'menu') game.confirm = true; return; }
+  if (game.screen === 'menu') {
+    if (k === 'Digit1') startMode('bot'); else if (k === 'Digit2') show('duoMenu'); else if (k === 'Digit3' || k === 'KeyH') { game.help = true; game.page = 0; } else if (k === 'KeyS') show('settings');
+    return;
+  }
+  if (game.screen === 'duoMenu') { if (k === 'Digit1') startMode('duoShared'); else if (k === 'Digit2') startMode('duoTurn'); return; }
+  if (game.screen === 'settings') { if (k === 'KeyV') game.fullView = !game.fullView; else if (k === 'KeyT') game.hintAlways = !game.hintAlways; return; }
+  if (game.screen === 'brief') { briefKey(k); return; }
+  if (game.screen === 'result') { if (k === 'KeyN' && settled()) nextRound(); return; }
+  if (game.screen !== 'play') return;
+  if (isBot()) { const a = k in KEYS_A ? KEYS_A[k] : k in KEYS_B ? KEYS_B[k] : null; if (a !== null) submit(game.me, a); return; }
+  if (game.mode === 'duoTurn') {
+    if (game.cover) { if (isKey(k, game.turn)) { game.cover = false; game.coverAt = performance.now(); } return; }
+    const keys = game.turn === 0 ? KEYS_A : KEYS_B; if (k in keys) turnSubmit(keys[k]); return;
+  }
+  if (k in KEYS_A) submit(0, KEYS_A[k]); else if (k in KEYS_B) submit(1, KEYS_B[k]);
+});
+function briefKey(k) {
+  if (!settled() || game.help) return;
+  if (isBot()) { if (k === 'KeyN' || k === 'tap') beginPlay(); return; }
+  const who = game.brief < 2 ? 0 : 1;                                   // 1P 的頁用空白鍵、2P 的頁用 Enter
+  if (!isKey(k, who)) return;
+  game.brief++; game.shownAt = performance.now();
+  if (game.brief >= 4) beginPlay();
+}
+function canvasXY(e) { const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * W / r.width, y: (e.clientY - r.top) * H / r.height }; }
+cv.addEventListener('pointerdown', e => {
+  const p = canvasXY(e); cv.focus();
+  for (const h of hits.slice().reverse()) if (p.x >= h.x && p.x <= h.x + h.w && p.y >= h.y && p.y <= h.y + h.h) { h.onClick(); return; }
+  if (game.help || game.confirm) return;
+  if (game.screen === 'brief') briefKey('tap');
+  else if (game.screen === 'result' && settled()) nextRound();
+});
+document.querySelectorAll('#pad button').forEach(b => b.addEventListener('click', () => {
+  if (game.screen === 'play' && isBot()) submit(game.me, +b.dataset.a);
+  else if (game.screen === 'brief') briefKey('tap');
+  else if (game.screen === 'result' && settled()) nextRound();
+}));
+
+// ---------- 繪製：棋盤 ----------
+// viewer：0／1＝該玩家自己的視角；-1＝結果（全看得到）；-2＝同一個畫面（兩人都看得到、不畫寶藏）
+function drawBoard(ox, oy, ts, viewer, now) {
+  const S = game.S, priv = viewer >= 0, all = viewer === -1;
+  const k = game.anim ? Math.min(1, (now - game.anim.t0) / game.anim.dur) : 1;
+  const posOf = i => { const p = S.p[i]; if (!game.anim) return { x: p.x, y: p.y };
+    const f = game.anim.from[i];
+    if (priv && i !== viewer && !game.fullView && cheb(game.anim.from[viewer], f) > VIEW) return { x: p.x, y: p.y };   // 從框外進來：直接出現
+    return { x: f.x + (p.x - f.x) * k, y: f.y + (p.y - f.y) * k }; };
+  g.fillStyle = 'rgba(0,0,0,.35)'; g.fillRect(ox + 8, oy + 8, N * ts + 6, N * ts + 6);
+  g.fillStyle = C.ink; g.fillRect(ox - 6, oy - 6, N * ts + 12, N * ts + 12);
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { const h = hash(x, y, game.round) % 10; spr(h < 7 ? 'grass0' : h < 9 ? 'grass1' : 'grass2', ox + x * ts, oy + y * ts, ts); }
+  const ai = ansIdx(S), ci = compOf(S.pats, ai);
+  S.pats.forEach((q, i) => {
+    spr('sand', ox + q.x * ts, oy + q.y * ts, ts);
+    g.drawImage(shapeImg(q.s, q.c), ox + q.x * ts, oy + q.y * ts, ts, ts);
+    if (all && (i === ai || i === ci)) { g.fillStyle = C.gold; const w = Math.max(4, ts / 12);
+      g.fillRect(ox + q.x * ts, oy + q.y * ts, ts, w); g.fillRect(ox + q.x * ts, oy + (q.y + 1) * ts - w, ts, w);
+      g.fillRect(ox + q.x * ts, oy + q.y * ts, w, ts); g.fillRect(ox + (q.x + 1) * ts - w, oy + q.y * ts, w, ts); }
+  });
+  if (priv && !game.fullView) {                                        // 虛線框：看得到夥伴的範圍（7×7）
+    const me = posOf(viewer);
+    const x0 = Math.max(0, me.x - VIEW), y0 = Math.max(0, me.y - VIEW), x1 = Math.min(N, me.x + VIEW + 1), y1 = Math.min(N, me.y + VIEW + 1);
+    g.fillStyle = 'rgba(42,34,48,.22)';
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) if (x + .5 < x0 || x + .5 > x1 || y + .5 < y0 || y + .5 > y1) g.fillRect(ox + x * ts, oy + y * ts, ts, ts);
+    g.strokeStyle = C.panel; g.lineWidth = 3; g.setLineDash([ts / 6, ts / 8]);
+    g.strokeRect(ox + x0 * ts + 1.5, oy + y0 * ts + 1.5, (x1 - x0) * ts - 3, (y1 - y0) * ts - 3); g.setLineDash([]);
+  }
+  const vis = i => !priv || i === viewer || game.fullView || cheb(S.p[viewer], S.p[i]) <= VIEW;
+  const mine = i => !priv || i === viewer;
+  const order = [0, 1].sort((i, j) => posOf(i).y - posOf(j).y);
+  for (const i of order) {
+    if (!vis(i)) continue;
+    const p = posOf(i), pl = S.p[i], px = ox + p.x * ts, py = oy + p.y * ts;
+    if (pl.locked && mine(i)) { g.fillStyle = pcol(i); const w = Math.max(4, ts / 10);
+      g.fillRect(px, py, ts, w); g.fillRect(px, py + ts - w, ts, w); g.fillRect(px, py, w, ts); g.fillRect(px + ts - w, py, w, ts); }
+    const isHuman = isBot() ? i === game.me : i === 0;
+    spr(isHuman ? 'human' : 'ai', px, py - ts * 0.18, ts);
+    const pi = patAt(S.pats, { x: Math.round(p.x), y: Math.round(p.y) });   // 站在圖案格上：右下角補小圖案
+    if (pi >= 0 && !game.anim) { const q = S.pats[pi], m = Math.round(ts * .5); g.fillStyle = C.panel; g.fillRect(px + ts - m - 2, py + ts - m - 2, m + 4, m + 4); g.drawImage(shapeImg(q.s, q.c), px + ts - m, py + ts - m, m, m); }
+    let st = '';                                                        // 名牌與狀態合成一塊，一次只顯示一種
+    if (mine(i)) { if (pl.locked && !all) st = '站定'; else if (performance.now() - game.bump[i] < 700) st = '被擋'; }
+    else if (game.still[viewer] && !game.anim) st = '停';
+    tag(st ? `${pname(i)}・${st}` : pname(i), px + ts / 2, p.y < 0.6 ? py + ts + 2 : py - ts * 0.18 - 30, pcol(i));
+  }
+  if (all) [ai, ci].forEach(i => { const q = S.pats[i]; tag(i === ai ? '寶藏' : '同一對', ox + (q.x + .5) * ts, oy + q.y * ts + 2, C.ink, 22); });
+}
+
+// ---------- 繪製：各畫面 ----------
+function clueSwatch(cx, y, i, v, sz) {                // 顏色用色條，形狀用灰色圖形
+  if (i === 0) { const bw = sz * 1.5, bh = sz * .45, bx = cx - bw / 2, by = y + (sz - bh) / 2;
+    g.fillStyle = C.ink; g.fillRect(bx, by, bw, bh); g.fillStyle = [C.red, C.blue][v]; g.fillRect(bx + 4, by + 4, bw - 8, bh - 8); }
+  else g.drawImage(shapeImg(v, 2), cx - sz / 2, y, sz, sz);
+}
+const smallBtn = (label, x, y, w, fn) => button(label, x, y, w, 52, fn, { size: 22 });
+function sideLeft() {
+  const S = game.S, rem = MAXSTEP - S.t, x = 24, w = 272;
+  panel(x, 40, w, 200);
+  text('還剩', x + 20, 82, 22, INK2);
+  text(`${rem} 步`, x + w - 20, 140, 44, C.ink, 'right');
+  if (rem <= 10 && game.screen === 'play') text('快沒步數：猜一格也比不站好', x + 20, 196, 22, C.ink);
+  else text(`第 ${game.round} 局・總分 ${game.stats.score > 0 ? '+' : ''}${game.stats.score}`, x + 20, 196, 22, INK2);
+  if (game.fullView || game.hintAlways) tag('練習設定中', x + w / 2, 256, C.ink, 22);
+}
+function sideRight(viewer) {
+  const S = game.S, x = 984, w = 272, res = game.screen === 'result';
+  if (res) { drawResult(x, w); return; }
+  panel(x, 40, w, 520);
+  if (game.mode === 'duoShared') {
+    [0, 1].forEach(i => { const y = 70 + i * 120;
+      text(`${pname(i)}：寶藏的${DIMW[i]}`, x + 20, y, 33, pcol(i));
+      text(i ? '方向鍵走・Enter 停' : 'WASD 走・空白鍵停', x + 20, y + 40, 22, INK2);
+      text(S.p[i].locked ? '已站定' : game.pend[i] !== null ? '這步已按' : '', x + w - 20, y + 74, 22, C.ink, 'right'); });
+  } else {
+    text(`${pname(viewer)}知道`, x + 20, 72, 22, INK2);
+    if (game.hintAlways) { text(`寶藏的${DIMW[viewer]}是${valName(viewer, S)}`, x + 20, 112, 33, pcol(viewer)); }
+    else { text(`寶藏的${DIMW[viewer]}`, x + 20, 112, 33, pcol(viewer)); text('開局看過，要記住', x + 20, 150, 22, INK2); }
+    const keys = isBot() ? (isTouch ? ['旁邊的方向鍵走', '「停」鍵停'] : ['WASD／方向鍵 走', '空白鍵／Enter 停']) : (viewer ? ['方向鍵 走', 'Enter 停'] : ['WASD 走', '空白鍵 停']);
+    text(keys[0], x + 20, 206, 22); text(keys[1], x + 20, 240, 22);
+    if (S.p[viewer].locked && !S.done) text(isBot() ? '你已站定，等夥伴' : '已站定：按任一鍵換人', x + 20, 290, 22, P1);
+  }
+  g.fillStyle = C.edge; g.fillRect(x + 20, 322, w - 40, 3);
+  text('格子旁停下＝告訴夥伴', x + 20, 356, 22); text('格子上按停＝站定', x + 20, 390, 22);
+  if (!game.fullView && game.mode !== 'duoShared') text('虛線框內才看得到夥伴', x + 20, 424, 22, INK2);
+  smallBtn(isTouch ? '規則' : '規則 H', x, 580, 130, () => { game.help = true; game.page = 0; });
+  smallBtn(isTouch ? '離開' : '離開 Esc', x + 142, 580, 130, () => game.confirm = true);
+}
+function drawResult(x, w) {
+  const S = game.S, o = S.outcome, r = REWARD[o];
+  const ai = ansIdx(S), a = S.pats[ai], c = S.pats[compOf(S.pats, ai)];
+  panel(x, 40, w, 520);
+  const head = { success: '成功！', wrong: '可惜，選錯了', timeout: '時間到' }[o];
+  text(head, x + 20, 84, 33, o === 'success' ? P1 : C.ink);
+  text(`${r > 0 ? '+' : ''}${r}`, x + w - 20, 84, 33, C.ink, 'right');
+  text(`寶藏是${cellName(a)}`, x + 20, 140, 22);
+  text(`那一對：${cellName(a)}＋${cellName(c)}`, x + 20, 174, 22);
+  const at = i => S.p[i].locked ? cellName(S.pats[S.p[i].lockPat]) : null;
+  const who = [0, 1].map(i => at(i) ? `${pname(i)}站了${at(i)}` : `${pname(i)}沒站定`);
+  if (o !== 'success') { text(who[0], x + 20, 218, 22, INK2); text(who[1], x + 20, 250, 22, INK2); }
+  g.fillStyle = C.edge; g.fillRect(x + 20, 290, w - 40, 3);
+  const st = game.stats;
+  text(`成功 ${st.success}・選錯 ${st.wrong}`, x + 20, 326, 22, INK2);
+  text(`時間到 ${st.timeout}・總分 ${st.score > 0 ? '+' : ''}${st.score}`, x + 20, 362, 22, INK2);
+  text(isTouch ? '點一下：下一局' : 'N：下一局', x + 20, 430, 33);
+  smallBtn(isTouch ? '規則' : '規則 H', x, 580, 130, () => { game.help = true; game.page = 0; });
+  smallBtn(isTouch ? '離開' : '離開 Esc', x + 142, 580, 130, () => game.confirm = true);
+}
+function drawPlay(now) {
+  const res = game.screen === 'result', v = isBot() ? game.me : game.mode === 'duoTurn' ? game.turn : -2;
+  drawBoard(320, 40, 64, res ? -1 : v, now);
+  sideLeft(); sideRight(v < 0 ? 0 : v);
+}
+function drawMenu() {
+  for (let x = 0; x < 20; x++) { spr('grass0', x * 64, 0, 64); spr(['bush', 'tree', 'pine', 'bush'][hash(x, 1, 3) % 4], x * 64, 0, 64); }
+  g.fillStyle = C.ink; g.fillRect(0, 64, W, 4);
+  text('Other Half', W / 2, 176, 88, C.panel, 'center');
+  text('你知道一半，夥伴知道另一半。', W / 2, 262, 33, C.edge, 'center');
+  spr('human', W / 2 - 104, 304, 64); spr('ai', W / 2 + 40, 304, 64);
+  const bw = 360, bx = (W - bw) / 2;
+  button('1  跟電腦玩', bx, 410, bw, 72, () => startMode('bot'));
+  button('2  兩個人玩', bx, 500, bw, 72, () => show('duoMenu'));
+  button('3  怎麼玩', bx, 590, bw, 72, () => { game.help = true; game.page = 0; });
+  smallBtn(isTouch ? '設定' : '設定 S', W - 176, 652, 152, () => show('settings'));
+  if (isTouch) text('兩個人玩要用鍵盤', 24, 680, 22, 'rgba(255,248,232,.7)');
+}
+function subScreen(title) {
+  g.fillStyle = C.page; g.fillRect(0, 0, W, H);
+  text(title, W / 2, 120, 44, C.panel, 'center');
+  smallBtn(isTouch ? '返回' : '返回 Esc', 24, 24, 160, toMenu);
+}
+function drawDuoMenu() {
+  subScreen('兩個人玩');
+  const bw = 640, bx = (W - bw) / 2;
+  button('1  同一個畫面', bx, 220, bw, 72, () => startMode('duoShared'));
+  text('一直看得到彼此，比較簡單', W / 2, 330, 22, C.edge, 'center');
+  button('2  輪流看螢幕', bx, 380, bw, 72, () => startMode('duoTurn'));
+  text('每一步換人看，夥伴靠近才看得到，比較難', W / 2, 490, 22, C.edge, 'center');
+  text('1P：WASD 走、空白鍵停　　2P：方向鍵走、Enter 停', W / 2, 590, 22, C.panel, 'center');
+}
+function drawSettings() {
+  subScreen('設定');
+  const row = (y, label, a, b, on, fn) => { text(label, 260, y + 36, 33, C.panel);
+    button(a, 560, y, 220, 64, () => fn(false), { sel: !on, size: 22 }); button(b, 800, y, 220, 64, () => fn(true), { sel: on, size: 22 }); };
+  row(220, '夥伴的位置', '靠近才看得到', '一直看得到', game.fullView, v => game.fullView = v);
+  row(330, '你的線索', '開局看一次', '一直顯示', game.hintAlways, v => game.hintAlways = v);
+  text('深色＝目前選的。左邊是正式規則，右邊是練習用。' + (isTouch ? '' : '（V、T 也能切換）'), W / 2, 470, 22, C.edge, 'center');
+  text('「兩個人玩・同一個畫面」不管怎麼設，都看得到彼此、不顯示線索。', W / 2, 510, 22, C.edge, 'center');
+}
+function overlayCard(w, h, a = .72) { const x = (W - w) / 2, y = (H - h) / 2; g.fillStyle = `rgba(42,34,48,${a})`; g.fillRect(0, 0, W, H); panel(x, y, w, h); return { x, y }; }
+function drawBrief() {
+  const S = game.S;
+  if (isBot()) {
+    const i = game.me, { x, y } = overlayCard(560, 440);
+    text(`第 ${game.round} 局`, x + 280, y + 44, 22, INK2, 'center');
+    text(`這局你知道寶藏的${DIMW[i]}`, x + 280, y + 96, 33, P1, 'center');
+    clueSwatch(x + 280, y + 130, i, i ? S.ans.s : S.ans.c, 112);
+    text(valName(i, S), x + 280, y + 282, 44, C.ink, 'center');
+    text(`夥伴知道${DIMW[1 - i]}。${game.hintAlways ? '（練習：線索會一直顯示）' : '記住它，開始後就收起來。'}`, x + 280, y + 340, 22, INK2, 'center');
+    text(isTouch ? '點一下開始' : 'N：開始', x + 280, y + 396, 33, C.ink, 'center');
+    return;
+  }
+  const b = game.brief, who = b < 2 ? 0 : 1, other = 1 - who, key = KEY_NAME[who];
+  const { x, y } = overlayCard(600, 440, 1);
+  text(`第 ${game.round} 局・看線索`, x + 300, y + 44, 22, INK2, 'center');
+  if (b % 2 === 0) {
+    text(`${pname(other)} 請轉頭`, x + 300, y + 150, 44, pcol(other), 'center');
+    text(`${pname(who)} 準備好就按 ${key}`, x + 300, y + 230, 33, C.ink, 'center');
+    spr(who === 0 ? 'human' : 'ai', x + 268, y + 290, 64);
+  } else {
+    text(`${pname(who)} 知道寶藏的${DIMW[who]}`, x + 300, y + 96, 33, pcol(who), 'center');
+    clueSwatch(x + 300, y + 130, who, who ? S.ans.s : S.ans.c, 112);
+    text(valName(who, S), x + 300, y + 282, 44, C.ink, 'center');
+    text(`記住後按 ${key} 收起`, x + 300, y + 380, 33, C.ink, 'center');
+  }
+}
+function drawCover() {
+  const t = game.turn, o = 1 - t, { x, y } = overlayCard(640, 360, 1);
+  text(`還剩 ${MAXSTEP - game.S.t} 步`, x + 320, y + 50, 22, INK2, 'center');
+  text(`換 ${pname(t)} 看螢幕`, x + 320, y + 130, 44, pcol(t), 'center');
+  text(`${pname(o)} 請轉頭`, x + 320, y + 186, 33, C.ink, 'center');
+  spr(t === 0 ? 'human' : 'ai', x + 288, y + 216, 64);
+  text(`${pname(t)} 按 ${KEY_NAME[t]} 繼續`, x + 320, y + 316, 33, C.ink, 'center');
+}
+// ---------- 怎麼玩：五張卡 ----------
+const tile = (x, y, c, s, sz = 64) => { spr('sand', x, y, sz); g.drawImage(shapeImg(s, c), x, y, sz, sz); };
+const sparkle = (x, y) => { g.fillStyle = C.gold; g.fillRect(x - 3, y - 12, 6, 24); g.fillRect(x - 12, y - 3, 24, 6); };
+const ring = (x, y, sz, col) => { g.strokeStyle = col; g.lineWidth = 5; g.strokeRect(x - 4, y - 4, sz + 8, sz + 8); };
+const HELP = [
+  { t: '找出寶藏那一對', L: ['四個圖案格配成兩對：顏色、形狀都不同的兩格是一對。', '寶藏藏在其中一格。你們要一人一格，站滿寶藏的那一對。'],
+    art: (x, y) => { [[0, 0, 1, 1], [0, 1, 1, 0]].forEach(([c1, s1, c2, s2], k) => { const bx = x + 140 + k * 360;
+      tile(bx, y, c1, s1); text('＋', bx + 100, y + 32, 33, C.ink, 'center'); tile(bx + 136, y, c2, s2); });
+      sparkle(x + 140 + 60, y + 4); text('寶藏', x + 172, y + 96, 22, C.ink, 'center'); } },
+  { t: '你們各知道一半', L: ['一人知道寶藏的顏色，一人知道寶藏的形狀，開局看一次就收起來。', '只靠自己那一半分不出是哪一對：例如「紅」，兩對裡都有紅色。'],
+    art: (x, y) => { [[0, 0, 1, 1], [0, 1, 1, 0]].forEach(([c1, s1, c2, s2], k) => { const bx = x + 140 + k * 360;
+      tile(bx, y, c1, s1); text('＋', bx + 100, y + 32, 33, C.ink, 'center'); tile(bx + 136, y, c2, s2); ring(bx, y, 64, C.ink); });
+      text('知道「紅」：兩對都可能', x + 400, y + 100, 22, INK2, 'center'); } },
+  { t: '靠近才看得到夥伴', L: ['不能說話，只能走位。四個圖案格兩人都一直看得到，', '但夥伴要在你附近（虛線框內，周圍 3 格）才看得到你，你看他也一樣。'],
+    art: (x, y) => { const ts = 22, ox = x + 390, oy = y - 30;
+      for (let yy = 0; yy < 7; yy++) for (let xx = 0; xx < 10; xx++) spr('grass0', ox + xx * ts, oy + yy * ts, ts);
+      g.strokeStyle = C.panel; g.lineWidth = 3; g.setLineDash([6, 4]); g.strokeRect(ox + 1 * ts, oy + 0, 7 * ts, 7 * ts); g.setLineDash([]);
+      spr('human', ox + 4 * ts, oy + 3 * ts, ts); spr('ai', ox + 6 * ts, oy + 2 * ts, ts);
+      text('框內：看得到', ox - 16, oy + 76, 22, C.ink, 'right'); text('框外：看不到', ox + 10 * ts + 16, oy + 76, 22, INK2); } },
+  { t: '用「停」告訴夥伴', L: ['走到某格的正上下左右，按一下停＝「我的線索是這格的顏色（或形狀）」。', '斜角不算。等人的時候別停在格子旁邊，會被當成訊號。'],
+    art: (x, y) => { tile(x + 400, y, 0, 1); spr('human', x + 320, y - 10, 64); tag('停', x + 352, y - 30, P1, 22);
+      text('站在紅方左邊停下：「我知道紅」', x + 400, y + 100, 22, INK2, 'center'); } },
+  { t: '站定，揭曉', L: ['看懂了就去寶藏格，站上去按停＝站定，之後不能動。', '夥伴先站好了，你就去同一對的另一格。兩人都站定才公布結果。', '兩人不能站同一格，撞到會都留在原地。'],
+    art: (x, y) => { [[260, 0, 0, 'human'], [470, 1, 1, 'ai']].forEach(([dx, c, sh, who]) => { tile(x + dx, y, c, sh); spr(who, x + dx, y - 12, 64);
+        g.fillStyle = C.panel; g.fillRect(x + dx + 30, y + 30, 36, 36); g.drawImage(shapeImg(sh, c), x + dx + 32, y + 32, 32, 32); });
+      text('＋', x + 400, y + 32, 33, C.ink, 'center'); text('紅圓＋藍方：成功', x + 400, y + 100, 22, P1, 'center'); } },
+];
+function drawHelp() {
+  hits = [];
+  const { x, y } = overlayCard(1040, 600, .85), card = HELP[game.page];
+  text(`${game.page + 1} / ${HELP.length}`, x + 1008, y + 40, 22, INK2, 'right');
+  text(card.t, x + 40, y + 48, 44);
+  card.art(x + 20, y + 140);
+  card.L.forEach((s, k) => text(s, x + 40, y + 290 + k * 36, 22));
+  if (game.page === HELP.length - 1) {
+    g.fillStyle = C.edge; g.fillRect(x + 40, y + 396, 960, 3);
+    text('兩人同時走：都按了鍵才走一步，停也算一步，共 50 步。', x + 40, y + 428, 22, INK2);
+    text('成功 +1、選錯 -1、時間到 -2。快沒步數時，猜一格站定也比不站好。', x + 40, y + 462, 22, INK2);
+  }
+  if (game.page > 0) smallBtn(isTouch ? '上一張' : '← 上一張', x + 40, y + 520, 200, () => game.page--);
+  smallBtn(game.page < HELP.length - 1 ? (isTouch ? '下一張' : '下一張 →') : (game.helpThenPlay ? '開始玩' : '看完了'), x + 800, y + 520, 200,
+    () => { if (game.page < HELP.length - 1) game.page++; else closeHelp(); });
+}
+function frame(now) {
+  hits = [];
+  g.fillStyle = C.page; g.fillRect(0, 0, W, H);
+  if (game.anim && now - game.anim.t0 > game.anim.dur) {
+    game.anim = null;
+    const q = game.queue; game.queue = [null, null]; q.forEach((a, i) => { if (a !== null) submit(i, a); });
+  }
+  if (game.screen === 'play' && isBot() && !game.S.done && !game.anim && game.S.p[game.me].locked && now - game.auto > 260) {
+    game.auto = now; const S = game.S, acts = [0, 0]; acts[game.bot.role] = botAct(game.bot, observe(S, game.bot.role, opt())); doStep(acts);   // 只剩夥伴在動：自動前進
+  }
+  if (game.screen === 'menu') drawMenu();
+  else if (game.screen === 'duoMenu') drawDuoMenu();
+  else if (game.screen === 'settings') drawSettings();
+  else {
+    drawPlay(now);
+    if (game.screen === 'brief') drawBrief();
+    if (game.screen === 'play' && game.mode === 'duoTurn' && game.cover) drawCover();
+  }
+  if (game.help) drawHelp();
+  if (game.confirm) { hits = []; const { x, y } = overlayCard(560, 240); text('離開會清掉這次的分數', x + 280, y + 56, 33, C.ink, 'center');
+    if (!isTouch) text('再按一次 Esc 離開，按其他鍵繼續玩', x + 280, y + 104, 22, INK2, 'center');
+    smallBtn('離開', x + 60, y + 150, 200, toMenu); smallBtn('繼續玩', x + 300, y + 150, 200, () => game.confirm = false); }
+  requestAnimationFrame(frame);
+}
+window.__game = { game, step, newRound, observe, botAct, makeBot, startMode, nextRound, beginPlay, submit };
+const go = () => { cv.focus(); requestAnimationFrame(frame); };
+(document.fonts && document.fonts.load ? document.fonts.load(FONT(33)).catch(() => {}) : Promise.resolve()).then(() => atlasImg.decode ? atlasImg.decode().then(go, go) : (atlasImg.onload = go));
+</script>
